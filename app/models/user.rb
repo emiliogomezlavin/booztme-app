@@ -15,7 +15,8 @@ class User < ActiveRecord::Base
           first_name: "Santi",
           last_name: "Me",
           email: "ayudo@worker.com",
-          password_digest: "yeiii"
+          password: "12345",
+          password_confirmation: "12345"
           })
 	end
 end
