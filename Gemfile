@@ -45,7 +45,7 @@ group :development do
   gem 'spring'
 end
 
-# gem 'messenger-bot'
+gem 'messenger-ruby'
 
 gem 'awesome_print', require: 'ap'
 
