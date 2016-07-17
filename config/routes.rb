@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  root to: 'home#home'
+  root 'home#home'
+
   resources :contents
   resources :users
+
+  #sign in routes
+  get '/sign_in', to: 'sessions#new'
+  post '/sessions', to: 'sessions#create'
+  delete '/sessions', to: 'sessions#destroy', as: 'delete'
+
 end

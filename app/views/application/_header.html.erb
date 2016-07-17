@@ -1,0 +1,21 @@
+<!-- Nav Bar -->
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text"><a href="/">BooztMe</a></li>
+    </ul>
+  </div>
+
+  <div class="top-bar-right">
+    <ul class="menu">
+      <% if current_user %>
+        <li class="menu"><%= button_to 'My Profile', user_path(current_user), method: :get, class: "currUser button" %></li>
+        <li class="menu"><%= button_to "Members", users_path, method: :get, class: "button" %></li>
+        <li class="menu"><%= button_to "Sign Out", sessions_path, method: :delete, class: "button" %></li>
+      <% else %>
+        <li class="menu"><%= button_to "Sign in", sign_in_path, method: :get, class: "button" %></li>
+        <li class="menu"><%= button_to "Sign up", new_user_path, method: :get, class: "button" %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

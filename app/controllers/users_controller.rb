@@ -9,7 +9,11 @@ class UsersController < ApplicationController
   # GET /contents/1
   def show
     @user = User.find(params[:id])
-    render :show
+    if current_user == nil 
+      redirect_to sign_in_path
+    else
+      render :show
+    end
   end
 
   # GET /contents/new
@@ -26,16 +30,20 @@ class UsersController < ApplicationController
 
   # POST /contents
   def create
-  	@user = User.new(user_params)
-  	if @user.save
-    	redirect_to @user
-  	else
-    	render :new
-  	end
+    @user = User.new(user_params)
+    if @user.save
+      login(@user)
+      flash[:success] = "Welcome to BooztMe!"
+      redirect_to @user
+    else
+      redirect_to new_user_path, flash: {error: @user.errors.full_messages.to_sentence}
+    end
   end
 
   # PATCH/PUT /contents/1
   def update
+    @user = User.find(params[:id])
+    @user.update_attributes(user_params)
   	if @user.update(user_params)
     	redirect_to @user
   	else
@@ -45,12 +53,14 @@ class UsersController < ApplicationController
 
   # DELETE /contents/1
   def destroy
+    @user = User.find(params[:id])
+    session.delete(:user_id)
     @user.destroy
-    redirect_to users_path
+    redirect_to users_url
   end
 
   private
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password_digest)
+      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
 end

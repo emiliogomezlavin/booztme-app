@@ -26,17 +26,17 @@ User.create([{
           first_name: "Emilio",
           last_name: "Gomez",
           email: "emilio@example.com",
-          password_digest: "12345"
+          password: "12345"
           },
           {
           first_name: "Juan",
           last_name: "Perez",
           email: "juan@example.com",
-          password_digest: "12345"
+          password: "12345"
           },
           {
           first_name: "John",
           last_name: "Smith",
           email: "john@example.com",
-          password_digest: "12345"
+          password: "12345"
         }])
