@@ -33,8 +33,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save      
       login(@user)
-      @content = Content.find(4)
-      UserBoozt.boozt_email(@user).deliver
+      # @content = Content.find(4)
+      # UserBoozt.boozt_email(@user).deliver
       flash[:success] = "Welcome to BooztMe!"
       redirect_to @user
     else

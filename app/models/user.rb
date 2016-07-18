@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
 	def self.boozt_email()
 		@content = Content.find(4)
-    	UserBoozt.boozt_email(@user).deliver
+		@user = User.find(111)
+    	UserBoozt.boozt_email(@user, @content).deliver
 	end
 end
