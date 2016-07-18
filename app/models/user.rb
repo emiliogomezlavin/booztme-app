@@ -10,13 +10,8 @@ class User < ActiveRecord::Base
   	end
 
 
-	def self.prueba()
-		User.create({
-          first_name: "Santi",
-          last_name: "Me",
-          email: "ayudo@worker.com",
-          password: "12345",
-          password_confirmation: "12345"
-          })
+	def self.boozt_email()
+		@content = Content.find(4)
+    	UserBoozt.boozt_email(@user).deliver
 	end
 end

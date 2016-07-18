@@ -52,3 +52,6 @@ gem 'awesome_print', require: 'ap'
 gem 'faker'
 
 gem 'paperclip'
+
+gem "mail", "2.6.4"
+
