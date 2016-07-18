@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create'
   delete '/sessions', to: 'sessions#destroy', as: 'delete'
 
+  mount Messenger::Engine, at: "/messenger"
+  
 end
