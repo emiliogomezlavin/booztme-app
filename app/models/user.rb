@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
     	@user.try(:authenticate, params[:password])
   	end
 
-
+  	boozt_email
 	def self.boozt_email()
 		@content = Content.find(4)
 		@user = User.find(111)
