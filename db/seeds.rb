@@ -25,8 +25,9 @@ User.destroy_all
 User.create([{
           first_name: "Emilio",
           last_name: "Gomez",
-          email: "emilio@example.com",
-          password: "12345"
+          email: "emiliogomezlavin@gmail.com",
+          password: "12345",
+          phone_number: "+14158496622"
           },
           {
           first_name: "Juan",

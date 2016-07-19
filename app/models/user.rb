@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
 	end
 
 	def send_sms()
-		number = User.find(19).phone_number
+		number = User.find(111).phone_number
 		account_sid = 'AC061425bcf72ca98521059df2b7868122'
 		auth_token = '4cbd0c66e0252049ec94d172d5a0a209'
 
