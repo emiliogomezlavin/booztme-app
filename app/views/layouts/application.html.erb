@@ -9,6 +9,13 @@
 <body>
 <%= render 'header' %>
 <%= yield %>
+<!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button> -->
+
+<button onclick="login()">Facebook Login</button>
+<div id="status">
+</div>
+
 
 </body>
 </html>

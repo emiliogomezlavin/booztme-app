@@ -6,3 +6,10 @@ task :boozt_email => :environment do
   puts "done."
 end
 
+task :boozt_text_message => :environment do
+  puts "Updating feed..."
+  User.send_sms
+  puts "done."
+end
+
+

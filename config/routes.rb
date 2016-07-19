@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   delete '/sessions', to: 'sessions#destroy', as: 'delete'
 
   mount Messenger::Engine, at: "/messenger"
+
+  get '/texty/send_text', to: "texty#new_text"
+  patch '/send_text', to: 'texty#send_text'
   
 end
 

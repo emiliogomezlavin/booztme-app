@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160717020228) do
+ActiveRecord::Schema.define(version: 20160719053114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,12 @@ ActiveRecord::Schema.define(version: 20160717020228) do
     t.string   "url"
     t.string   "category"
     t.string   "sentiment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "phones", force: :cascade do |t|
+    t.integer  "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160717020228) do
     t.string   "boozts_frequency"
     t.text     "boozt_time_slot",   default: [],              array: true
     t.text     "random_boozt_time", default: [],              array: true
+    t.string   "phone_number"
   end
 
 end

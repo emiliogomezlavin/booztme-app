@@ -1,0 +1,7 @@
+<div>
+	<%= form_for current_user, url: '/send_text' do |f| %>
+		<%= f.label :phone_number %>
+		<%= f.telephone_field :phone_number %><br>
+		<%= f.submit "Send Text" %>
+		<% end %>
+</div>

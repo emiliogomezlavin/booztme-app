@@ -61,8 +61,24 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def new_text
+    @user = current_user
+    binding.pry
+    render :new_text
+  end
+
+  def send_text
+    @user = current_user
+    @user.send_sms(@user.phone_number)
+    redirect_to :back
+  end
+
   private
-    def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
-    end
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :phone_number, :boozts_per_day, :boozts_frequency, :boozt_time_slot => [], :random_boozt_time => [])
+  end
 end
+
+
+
+
