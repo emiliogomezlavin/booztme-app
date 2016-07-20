@@ -1,21 +1,29 @@
-<!-- Nav Bar -->
-<div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text"><a href="/">BooztMe</a></li>
-    </ul>
-  </div>
 
-  <div class="top-bar-right">
-    <ul class="menu">
+<nav class="my-nav-bar">
+    <div class="nav-wrapper">
+      <a id="logo-container" href="/" class="brand-logo image-responsive"><%= image_tag('boozt-logo.png') %></a>
+      <ul class="right hide-on-med-and-down">
       <% if current_user %>
-        <li class="menu"><%= button_to 'My Profile', user_path(current_user), method: :get, class: "currUser button" %></li>
-        <li class="menu"><%= button_to "Members", users_path, method: :get, class: "button" %></li>
-        <li class="menu"><%= button_to "Sign Out", sessions_path, method: :delete, class: "button" %></li>
+        <a href="/about">About</a>
+        <li><%= link_to 'My Profile', user_path(current_user), method: :get %></li>
+        <li><%= link_to "Members", users_path, method: :get %></li>
+        <li><%= link_to "Sign Out", sessions_path, method: :delete%></li>
       <% else %>
-        <li class="menu"><%= button_to "Sign in", sign_in_path, method: :get, class: "button" %></li>
-        <li class="menu"><%= button_to "Sign up", new_user_path, method: :get, class: "button" %></li>
+        <li><%= link_to "Sign in", sign_in_path, method: :get %></li>
+        <li><%= link_to "Sign up", new_user_path, method: :get %></li>
       <% end %>
     </ul>
-  </div>
-</div>
+
+      <ul id="nav-mobile" class="side-nav">
+        <% if current_user %>
+        <li><%= link_to 'My Profile', user_path(current_user), method: :get %></li>
+        <li><%= link_to "Members", users_path, method: :get %></li>
+        <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign in", sign_in_path, method: :get %></li>
+        <li><%= link_to "Sign up", new_user_path, method: :get %></li>
+      <% end %>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>

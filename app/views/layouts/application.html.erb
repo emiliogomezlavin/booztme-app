@@ -5,16 +5,30 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Compiled and minified CSS for Materialize-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<!-- Google Material Design Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Social Media Icons -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+
+  <!-- Compiled and minified JavaScript for Materialize-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
 </head>
 <body>
-<%= render 'header' %>
+
 <%= yield %>
+
+<%= render 'footer' %>
+
+<!-- Facebook Login OAuth -->
 <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button> -->
-
-<button onclick="login()">Facebook Login</button>
+<!-- <button onclick="login()">Facebook Login</button>
 <div id="status">
-</div>
+</div> -->
 
 
 </body>

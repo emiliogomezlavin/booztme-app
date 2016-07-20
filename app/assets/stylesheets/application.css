@@ -13,3 +13,76 @@
  *= require_tree .
  *= require_self
  */
+
+
+nav ul a,
+nav .brand-logo {
+  color: #F05D23;
+}
+
+.brand-logo {
+  height:30px;
+  width: 100%;
+}
+.my-nav-bar {
+  background-color: transparent;
+}
+
+#logo {
+  width: 100px;
+  height:100px;
+}
+.button {
+  background-color: #F05D23
+  color: white;
+}
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #F05D23;
+  background-color: #F05D23
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.fi-social-github .fi-social-facebook {
+ font-size: inherit; 
+}
+
+footer.page-footer {
+  margin-top: -100px;
+  background-color: #f05d23;
+}

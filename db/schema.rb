@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719053114) do
+ActiveRecord::Schema.define(version: 20160720074254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boozts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "content_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "boozts", ["content_id"], name: "index_boozts_on_content_id", using: :btree
+  add_index "boozts", ["user_id"], name: "index_boozts_on_user_id", using: :btree
 
   create_table "contents", force: :cascade do |t|
     t.string   "title"
@@ -36,13 +46,16 @@ ActiveRecord::Schema.define(version: 20160719053114) do
     t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.integer  "boozts_per_day"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "boozts_frequency"
-    t.text     "boozt_time_slot",   default: [],              array: true
-    t.text     "random_boozt_time", default: [],              array: true
+    t.text     "random_boozt_time",    default: [],              array: true
     t.string   "phone_number"
+    t.integer  "boozt_start"
+    t.integer  "boozt_end"
+    t.integer  "boozts_per_frequency"
   end
 
+  add_foreign_key "boozts", "contents"
+  add_foreign_key "boozts", "users"
 end
