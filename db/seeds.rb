@@ -22,22 +22,34 @@ Content.create([{
 
 User.destroy_all
 
+
 User.create([{
           first_name: "Emilio",
           last_name: "Gomez",
           email: "emiliogomezlavin@gmail.com",
           password: "12345",
+          boozt_start: 15,
+          boozt_end: 16,
+          boozts_per_frequency: 3,
           phone_number: "+14158496622"
           },
           {
           first_name: "Juan",
           last_name: "Perez",
-          email: "juan@example.com",
-          password: "12345"
+          email: "emiliogomezlavin@gmail.com",
+          password: "12345",
+          boozt_start: 7,
+          boozt_end: 15,
+          boozts_per_frequency: 1,
+          phone_number: "+14158496622"
           },
           {
           first_name: "John",
           last_name: "Smith",
-          email: "john@example.com",
-          password: "12345"
+          email: "emiliogomezlavin@gmail.com",
+          password: "12345",
+          boozt_start: 15,
+          boozt_end: 16,
+          boozts_per_frequency: 5,
+          phone_number: "+14158496622"
         }])
