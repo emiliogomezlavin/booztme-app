@@ -1,29 +1,25 @@
-
+ 
 <nav class="my-nav-bar">
-    <div class="nav-wrapper">
-      <a id="logo-container" href="/" class="brand-logo image-responsive"><%= image_tag('boozt-logo.png') %></a>
-      <ul class="right hide-on-med-and-down">
+  <div class="nav-wrapper"> 
+    <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down menu-titles">
+      <li><a href="/about">ABOUT</a></li>
       <% if current_user %>
-        <a href="/about">About</a>
-        <li><%= link_to 'My Profile', user_path(current_user), method: :get %></li>
-        <li><%= link_to "Members", users_path, method: :get %></li>
-        <li><%= link_to "Sign Out", sessions_path, method: :delete%></li>
+        <li><%= link_to 'PROFILE', user_path(current_user), method: :get %></li>
+        <li><%= link_to "SIGN OUT", sessions_path, method: :delete%></li>
       <% else %>
-        <li><%= link_to "Sign in", sign_in_path, method: :get %></li>
-        <li><%= link_to "Sign up", new_user_path, method: :get %></li>
+        <li><%= link_to "SIGN IN", sign_in_path, method: :get %></li>
+        <li><%= link_to "SIGN UP", new_user_path, method: :get %></li>
       <% end %>
     </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <% if current_user %>
-        <li><%= link_to 'My Profile', user_path(current_user), method: :get %></li>
-        <li><%= link_to "Members", users_path, method: :get %></li>
-        <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to "Sign in", sign_in_path, method: :get %></li>
-        <li><%= link_to "Sign up", new_user_path, method: :get %></li>
-      <% end %>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+    <ul id="mobile-demo" class="side-nav">
+      <% if current_user %>
+      <li><%= link_to 'Profile', user_path(current_user), method: :get %></li>
+      <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to "Sign in", sign_in_path, method: :get %></li>
+      <li><%= link_to "Sign up", new_user_path, method: :get %></li>
+    <% end %>
+    </ul>
+  </div>
+</nav>

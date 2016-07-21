@@ -112,3 +112,4 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+

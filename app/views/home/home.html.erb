@@ -1,14 +1,13 @@
 <div id="index-banner" class="parallax-container">
-	<%= render 'header' %>
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
         <div class="row center">
-          <div id="logo"><%= image_tag('boozt-logo.png') %></div>
-          <h5 class="header col s12 light">Brighting up the world one boozt at a time</h5>
+          <div class="col s4 offset-s4" id="logo"><img class="home-logo center" src="assets/boozt_logo_orange"></div>
+          <h5 class="header col s12 light">Bright up the world one boozt at a time</h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light btn button">Join the party!!!</a>
+          <%= link_to "Join the club", new_user_path, method: :get, class: "waves-effect waves-light btn-large button" %>
         </div>
         <br><br>
 
@@ -19,34 +18,35 @@
 
 
   <div class="container">
-    <div class="section">
+    <div class="section" style="background: white">
 
       <!--   Icon Section   -->
+      <div class="row center"><h1 class="home-title">How it Works</h1></div>
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
+            <h2 class="center brown-text"><i class="material-icons">assignment_turned_in</i></h2>
+            <h5 class="center">Sign Up</h5>
 
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            <p class="light">Join our community of boozted people</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
+            <h5 class="center">Personalize</h5>
 
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            <p class="light">Choose how many boozts you want to receive every day</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">mood</i></h2>
+            <h5 class="center">Enjoy</h5>
+
+            <p class="light">Receive boozts randomly during the day to lift your spirit when you least expect it!</p>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light"></h5>
         </div>
       </div>
     </div>
@@ -72,8 +72,11 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <h1 style="color: #F05D23">Why Boozt?</h1></br>
+          <p class="left-align light why-p-tag"><i class="material-icons">mood</i>&nbsp Take a break, relax and enjoy life</p>
+          <p class="left-align light why-p-tag"><i class="material-icons">mood</i>&nbsp The best gift comes when you don't expect it</p>
+          <p class="left-align light why-p-tag"><i class="material-icons">mood</i>&nbsp A small change in your mood can change everything that comes after</p>
+          <p class="left-align light why-p-tag"><i class="material-icons">mood</i>&nbsp Platform of boozted people that want a happier world</p>
         </div>
       </div>
 
@@ -85,7 +88,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light"></h5>
         </div>
       </div>
     </div>
