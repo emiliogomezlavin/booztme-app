@@ -33,7 +33,7 @@ nav .brand-logo {
   height:100px;
 }
 .button {
-  background-color: #F05D23
+  background-color: #F05D23;
   color: white;
 }
 p {
@@ -42,7 +42,7 @@ p {
 
 .button-collapse {
   color: #F05D23;
-  background-color: #F05D23
+  background-color: #F05D23;
 }
 
 .parallax-container {
