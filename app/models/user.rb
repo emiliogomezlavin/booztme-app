@@ -93,10 +93,21 @@ class User < ActiveRecord::Base
 			p now
 			if boozt.timestamp > now && boozt.timestamp < nowTen
 				##calls on message, text or email
-				p "it goes in"
-				User.boozt_sms(boozt)
-				User.boozt_email(boozt)
+				if boozt.user_id.delivery_choice === "text"
+					User.boozt_sms(boozt)
+				else 
+					User.boozt_email(boozt)
+				end
 			end
+		end
+	end
+
+	def self.demo_day
+		i = 153
+		while i < 163 do
+			User.boozt_sms(Boozt.find(i))
+			User.boozt_email(Boozt.find(i))
+			i += 1
 		end
 	end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720205440) do
+ActiveRecord::Schema.define(version: 20160721165405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160720205440) do
     t.integer  "boozt_start"
     t.integer  "boozt_end"
     t.integer  "boozts_per_frequency"
+    t.string   "delivery_choice"
   end
 
   add_foreign_key "boozts", "contents"

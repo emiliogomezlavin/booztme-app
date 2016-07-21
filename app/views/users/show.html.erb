@@ -1,19 +1,53 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @user.first_name %>
-</p>
+<div class="container">
+	<div class="row">
+		<div class="card-panel white" style="margin-top: 50px">
+			<div class="row">
+				<h1 class="center" style="color: gray"><%= @user.first_name %></h1>
+				<div class="col l8 offset-l2 s12 profile-container">
+<!-- 					<div class="row">
+						    <div class="col s12">
+						      <ul class="tabs">
+						        <li class="tab col s3"><a class="tab-title" href="user/contents">Boozts</a></li>
+						        <li class="tab col s3"><a class="active tab-title" href="/users/:id">Profile</a></li>
+						        <li class="tab col s3 disabled"><a class="tab-title" href="/friends">Friends</a></li>
+						      </ul>
+						    </div>
+						  </div> -->
+					<div class="row">
+						<div class="col l5 offset-l1 s12">
+							<h6 class="profile-info"><b>Name:</b>&nbsp&nbsp&nbsp<%= @user.first_name %>&nbsp<%= @user.last_name %></h6>
+						</div>
+						<div class="col l5 s12 center">
+							<h6 class="profile-info"><b>Phone Number:</b>&nbsp&nbsp&nbsp<%= @user.phone_number %></h6>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col l10 offset-l1 s12">
+							<h6 class="profile-info"><b>Email:</b>&nbsp&nbsp&nbsp<%= @user.email %></h6>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col l5 offset-l1 s12">
+							<h6 class="profile-info"><b>Schedule:</b>&nbsp&nbsp&nbsp<%= @user.boozt_start %>&nbsp-&nbsp<%= @user.boozt_end %></h6>
+						</div>
+						<div class="col l5 s12">
+							<h6 class="profile-info"><b>Boozts Per Day:</b>&nbsp&nbsp&nbsp<%= @user.boozts_per_frequency %></h6>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col l10 offset-l1 s12 right-align">
+							<%= link_to 'Edit', edit_user_path(@user), class: "button btn-large" %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-<p>
-  <strong>Url:</strong>
-  <%= @user.last_name %>
-</p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @user.email %>
-</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
+

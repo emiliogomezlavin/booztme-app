@@ -75,7 +75,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :phone_number, :boozts_per_day, :boozts_frequency, :boozt_time_slot => [], :random_boozt_time => [])
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :phone_number, :boozts_per_frequency, :boozts_frequency, :boozt_start, :boozt_end, :delivery_choice)
   end
 end
 

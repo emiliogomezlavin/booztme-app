@@ -17,11 +17,11 @@
  body{
   font-family: 'Arvo', serif;
   background-image: url(http://i64.tinypic.com/2lng6sh.png);
-  background-size: cover
+  background-size: cover;
  }
 
-.menu-titles {
-  color: red;
+.menu-titles > li {
+  color: white !important;
 }
 
 .brand-logo {
@@ -38,7 +38,7 @@
 }
 
 li > a {
-  color: #F05D23 !important;
+  color: white !important;
   font-size: 22px !important;
   margin-top: 20px;
   margin-left: 20px;
@@ -63,10 +63,29 @@ li > a {
   color: white !important;
 }
 
-.background {
-  /*background-image: url(http://i64.tinypic.com/2lng6sh.png);*/
+.stripe{
+  width: 100% !important;
+  background-color: white !important;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
+.profile-info {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.tab-title {
+  height: 50px;
+}
+
+.iphone-image {
+  height: 500px;
+}
+
+.profile-container {
+  border: 3px solid gray;
+}
 .header {
   margin-top: 20px;
 }
@@ -120,6 +139,11 @@ p {
   }
 }
 
+#user_boozt_start {
+    height: 30px !important;
+    width: 150px !important;
+}
+
 .icon-block {
   padding-right: 40px;
   padding-left: 40px;
@@ -137,6 +161,6 @@ footer.page-footer {
   background-color: #f05d23;
 }
 
-.link > li > a {
-  font-size: 15px;
+.link > li {
+  font-size: 50px !important;
 }

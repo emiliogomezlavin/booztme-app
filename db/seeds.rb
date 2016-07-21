@@ -24,32 +24,102 @@ User.destroy_all
 
 
 User.create([{
-          first_name: "Emilio",
-          last_name: "Gomez",
-          email: "emiliogomezlavin@gmail.com",
+          first_name: "Benjamin",
+          last_name: "Yang",
+          email: "darkspherico@gmail.com",
           password: "12345",
           boozt_start: 20,
           boozt_end: 21,
           boozts_per_frequency: 3,
-          phone_number: "+14158496622"
+          phone_number: "+16503073590"
           },
           {
-          first_name: "Juan",
-          last_name: "Perez",
-          email: "emiliogomezlavin@gmail.com",
+          first_name: "Sam",
+          last_name: "Brooks",
+          email: "sbrks3@gmail.com",
           password: "12345",
           boozt_start: 20,
           boozt_end: 21,
           boozts_per_frequency: 1,
-          phone_number: "+14158496622"
+          phone_number: "+17742222139"
           },
           {
-          first_name: "John",
-          last_name: "Smith",
+          first_name: "Valerie",
+          last_name: "Jones",
+          email: "mistress.wyn@gmail.com",
+          password: "12345",
+          boozt_start: 20,
+          boozt_end: 21,
+          boozts_per_frequency: 5,
+          phone_number: "+16507873493"
+        },
+         {
+          first_name: "Matt",
+          last_name: "LaGuardia",
+          email: "matthewlaguardia@gmail.com",
+          password: "12345",
+          boozt_start: 20,
+          boozt_end: 21,
+          boozts_per_frequency: 5,
+          phone_number: "+19168377528"
+        },
+         {
+          first_name: "Anthony",
+          last_name: "Schurz",
+          email: "anthonyschurz@gmail.com",
+          password: "12345",
+          boozt_start: 20,
+          boozt_end: 21,
+          boozts_per_frequency: 5,
+          phone_number: "+15743393334"
+        },
+         {
+          first_name: "Michael",
+          last_name: "Norelli",
+          email: "mnorelli360@gmail.com",
+          password: "12345",
+          boozt_start: 20,
+          boozt_end: 21,
+          boozts_per_frequency: 5,
+          phone_number: "+14156253360"
+        },
+        {
+          first_name: "Kabah",
+          last_name: "Conda",
           email: "emiliogomezlavin@gmail.com",
           password: "12345",
           boozt_start: 20,
           boozt_end: 21,
           boozts_per_frequency: 5,
-          phone_number: "+14158496622"
+          phone_number: "+15104594514"
+        },
+        {
+          first_name: "Jen",
+          last_name: "MacPhail",
+          email: "emiliogomezlavin@gmail.com",
+          password: "12345",
+          boozt_start: 20,
+          boozt_end: 21,
+          boozts_per_frequency: 5,
+          phone_number: "+15165120023"
+        },
+        {
+          first_name: "Vanessa",
+          last_name: "Farias",
+          email: "emiliogomezlavin@gmail.com",
+          password: "12345",
+          boozt_start: 20,
+          boozt_end: 21,
+          boozts_per_frequency: 5,
+          phone_number: "+16508627773"
+        },
+        {
+          first_name: "Annabelle",
+          last_name: "Thadeus",
+          email: "emiliogomezlavin@gmail.com",
+          password: "12345",
+          boozt_start: 20,
+          boozt_end: 21,
+          boozts_per_frequency: 5,
+          phone_number: "+12108442811"
         }])
