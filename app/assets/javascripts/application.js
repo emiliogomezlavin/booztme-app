@@ -34,7 +34,7 @@
     $('.modal-trigger').leanModal();
   });
 
-  window.sr = ScrollReveal().reveal('.horse');
+  // window.sr = ScrollReveal().reveal('.horse');
 
 
   // This is called with the results from from FB.getLoginStatus().
