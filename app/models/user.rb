@@ -26,8 +26,8 @@ class User < ActiveRecord::Base
 		number = @user.phone_number
 		content = @content.url
 
-		account_sid = 'AC061425bcf72ca98521059df2b7868122'
-		auth_token = '4cbd0c66e0252049ec94d172d5a0a209'
+		account_sid = ENV["twilio_account_sid"]
+		auth_token = ENV["twilio_auth_token"]
 
 		@client = Twilio::REST::Client.new account_sid, auth_token
 
@@ -65,7 +65,6 @@ class User < ActiveRecord::Base
 
 			random_boozt_time.each do |boozt|
 				##  sets a random index for the content array to use on the user
-				##  *** Missing to check if user already got that content
 				random = Random.new.rand(0.0...1.0)
 				cont_index = (random * contents.length).to_i
 
@@ -102,13 +101,12 @@ class User < ActiveRecord::Base
 		end
 	end
 
-	def self.demo_day
-		i = 153
-		while i < 163 do
-			User.boozt_sms(Boozt.find(i))
-			User.boozt_email(Boozt.find(i))
-			i += 1
-		end
+	def self.demo
+		# u = User.last
+		# c = Content.find(29)
+		# c = Content.find(13)
+		# Boozt.create({user: u, content: c})
+		User.boozt_sms(Boozt.find(169))
 	end
 
 

@@ -14,11 +14,11 @@
     </ul>
     <ul id="mobile-demo" class="side-nav">
       <% if current_user %>
-      <li><%= link_to 'Profile', user_path(current_user), method: :get %></li>
-      <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
+      <li><%= link_to 'Profile', user_path(current_user), method: :get, class: "side-titles" %></li>
+      <li><%= link_to "Sign Out", sessions_path, method: :delete, class: "side-titles" %></li>
     <% else %>
-      <li><%= link_to "Sign in", sign_in_path, method: :get %></li>
-      <li><%= link_to "Sign up", new_user_path, method: :get %></li>
+      <li><%= link_to "Sign in", sign_in_path, method: :get, class: "side-titles" %></li>
+      <li><%= link_to "Sign up", new_user_path, method: :get, class: "side-titles" %></li>
     <% end %>
     </ul>
   </div>

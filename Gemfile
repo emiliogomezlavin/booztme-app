@@ -58,3 +58,5 @@ gem 'paperclip'
 
 gem "mail", "2.6.4"
 
+gem "figaro"
+
