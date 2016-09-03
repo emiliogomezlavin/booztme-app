@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get '/texty/send_text', to: "texty#new_text"
   patch '/send_text', to: 'texty#send_text'
+
+  post '/instant_boozt', to: "users#instant_boozt"
   
 end
 

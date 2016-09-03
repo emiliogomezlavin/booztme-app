@@ -73,9 +73,27 @@ class UsersController < ApplicationController
     redirect_to :back
   end
 
+  def instant_boozt
+    @user = User.find(1)
+    @user.first_name = params["first_name"] 
+    @user.phone_number = params["phone_number"]
+    @user.email = params["email"]
+    if @user.save
+      User.demo
+      redirect_to :back
+    else
+      redirect_to :back
+    end
+    
+  end
+
   private
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :phone_number, :boozts_per_frequency, :boozts_frequency, :boozt_start, :boozt_end, :delivery_choice)
+  end
+
+  def istant_boozt_params
+    params.require(:user).permit(:first_name, :email, :phone_number)
   end
 end
 

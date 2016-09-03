@@ -18,7 +18,7 @@
   font-family: 'Baloo Paaji', cursive !important;
   background-image: url(http://i64.tinypic.com/2lng6sh.png);
   background-size: cover;
-  position: relative;
+  /*position: relative;*/
  }
 
 .menu-titles > li {
@@ -107,15 +107,19 @@ li > a {
 }
 
 .horse {
-  position: absolute;
+  position: absolute !important;
   left: 0px;
   top: -2px;
 }
 
 .dog {
-  position: absolute;
+  position: absolute !important;
   right: 0px;
   bottom: -100px;
+}
+
+.animated-image-container {
+  position: relative !important;
 }
 
 .why-p-tag {
@@ -171,11 +175,34 @@ p {
   #index-banner .section {
     top: 10%;
   }
+  
+  .horse {
+    position: absolute !important;
+    left: -1px;
+    top: -201px;
+  }
+
+  .dog {
+    position: absolute !important;
+    right: 6px;
+    bottom: -368px;
+  }
 }
 
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
+  }
+  .horse {
+    position: absolute !important;
+    left: -1px;
+    top: -201px;
+  }
+
+  .dog {
+    position: absolute !important;
+    right: 6px;
+    bottom: -368px;
   }
 }
 

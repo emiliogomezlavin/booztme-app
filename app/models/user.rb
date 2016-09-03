@@ -2,9 +2,9 @@ class User < ActiveRecord::Base
 	has_many :boozts, dependent: :destroy
 	has_many :contents, through: :boozts
 
-	validates :first_name, :last_name, :email, :password, presence: true
+	validates :first_name, :last_name, :email, presence: true
 	# validates :email, uniqueness: true
-	validates :password, confirmation:true
+	# validates :password, confirmation:true
 
 	has_secure_password
   	def self.confirm(params)
@@ -102,11 +102,14 @@ class User < ActiveRecord::Base
 	end
 
 	def self.demo
-		# u = User.last
-		# c = Content.find(29)
-		# c = Content.find(13)
-		# Boozt.create({user: u, content: c})
-		User.boozt_sms(Boozt.find(169))
+		user = User.find(1)
+		content = Content.find(29)
+		# content = Content.find(13)
+		boozt = Boozt.create({user: user, content: content})
+		if user.phone_number != "" && user.email != ""
+			User.boozt_sms(Boozt.find(boozt.id))
+			User.boozt_email(Boozt.find(boozt.id))
+		end
 	end
 
 

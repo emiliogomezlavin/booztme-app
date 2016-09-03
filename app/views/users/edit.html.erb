@@ -6,8 +6,58 @@
 				<h1 class="center">Edit Profile</h1>
 				<br><br><br>
 
-				<%= render 'form' %>
-
+				<div class="row">
+				  <%= form_for(@user) do |f| %>
+				    <div class="row">
+				      <div class="col l5 offset-l1 s10 offset-s1">
+				        <%= f.label :first_name, class: "label" %><br>
+				        <%= f.text_field :first_name, placeholder: "First Name"  %>
+				      </div>
+				      <div class="col l5 s10 offset-s1">
+				        <%= f.label :last_name, class: "label" %><br>
+				        <%= f.text_field :last_name, placeholder: "Last Name"  %>
+				      </div>
+				      <div class="col l1 s1"></div>
+				    </div>
+				    <div class="row">
+				      <div class="col l5 offset-l1 s10 offset-s1">
+				        <%= f.label :email, class: "label" %><br>
+				        <%= f.text_field :email, placeholder: "name@example.com"  %>
+				      </div>
+				      <div class="col l5 s10 offset-s1">
+				        <%= f.label :phone_number, class: "label" %><br>
+				        <%= f.text_field :phone_number, placeholder: "+1415XXXXXXX" %>
+				      </div>
+				      <div class="col l1 s1"></div>
+				    </div>
+				    <div class="row">
+				      <div class="input-field col l3 offset-l1 s12">
+				          <i class="material-icons prefix">access time</i>
+				          <input id="icon_telephone" type="tel" class="validate" name="user[boozt_start]" placeholder="8:00 AM">
+				          <label for="icon_telephone">Start Time</label>
+				      </div>
+				      <div class="input-field col l3 s12">
+				          <i class="material-icons prefix">access time</i>
+				          <input id="icon_telephone" type="tel" class="validate" name="user[boozt_end]" placeholder="5:00 PM">
+				          <label for="icon_telephone">End Time</label>
+				      </div>
+				      <div class="input-field col l3 s12">
+				          <i class="material-icons prefix">flash on</i>
+				          <input id="icon_telephone" type="tel" class="validate" name="user[boozts_per_frequency]" placeholder="As many as you want!!!" >
+				          <label for="icon_telephone">Boozts per day</label>
+				      </div>
+				      <div class="row">
+				        <div class="col l5 offset-l3 s11 offset-s1 center" style="margin-top: 20px">
+				          <%= f.label :delivery_choice, class: "label" %><br>
+				          <%= f.text_field :delivery_choice, placeholder: "Text or Email"  %>
+				        </div>
+				      </div>
+				    </div>
+				    <div class="actions center">
+				      <button type="submit" class="button btn-large" style="line-height: 15px">Submit&nbsp&nbsp&nbsp<i class="material-icons">send</i></button>
+				    </div>
+				  <% end %>
+				</div>
 			</div>
 		</div>
 	</div>

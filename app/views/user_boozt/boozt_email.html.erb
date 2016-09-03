@@ -1,5 +1,37 @@
-<div class="container" style="background-image: url(http://i64.tinypic.com/2lng6sh.png)">
-	<img src="http://i67.tinypic.com/8yajxf.png" style="height: 109; width: 309px; margin-left: 200px" >
+<div class="container" style="background-image: url(http://i64.tinypic.com/2lng6sh.png); background-size: cover">
+	
+	<table align="center">
+        <thead>
+          <tr>
+              <th data-field="id"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+	        <tr>
+	            <td align="center"><a href="http://www.booztme.com"><img src="http://i67.tinypic.com/8yajxf.png" style="height: 109; width: 309px;font-family: 'Lato', sans-serif; text-align: center; padding-top: 30px; padding-bottom: 40px" ></a></td>
+	        </tr>
+	        <tr>
+	        	<td><h1 style="color: #F05D23; font-family: 'Lato', sans-serif; text-align: center">Hello <%= @user.first_name %></h1></td>
+	        </tr>
+	        <tr>
+	            <td><h4 style="color: white; font-family: 'Lato', sans-serif; text-align: center; padding-left: 20px; padding-right: 20px">It's time to stop, take a deep breath and enjoy life!!!</h4></td>
+	        </tr>
+	        <tr>
+	            <td><h4 style="color:white; font-family: 'Lato', sans-serif; text-align: center">Here is your Boozt</h4></td>
+	        </tr>
+	        <tr>
+	            <td align="center"><img src="<%= @content.url %>" style="width: 250px; border: 2px solid gray; border-radius: 4px; margin-bottom: 30px"></td>
+	        </tr>
+	        <tr>
+	            <td><p style="color:white; font-family: 'Lato', sans-serif; text-align: center; padding-bottom: 30px; padding-left: 10px; padding-right: 10px">Share <a href="http://www.booztme.com" style="color: #F05D23; font-family: 'Lato', sans-serif; font-weight: bold">Boozt</a> with your friends and brighten up their day!!</p></td>
+	        </tr>
+        </tbody>
+      </table>
+
+
+
+<!-- 	<img src="http://i67.tinypic.com/8yajxf.png" style="height: 109; width: 309px; margin-left: 200px" >
 	<br><br><br>
 	<h1 style="color: #F05D23; margin-left: 300px">Hello <%= @user.first_name %></h1>
 
@@ -10,5 +42,5 @@
 	<img src="<%= @content.url %>" style="height: 250px; width: 250px; border: 2px solid gray; border-radius: 4px; margin-left: 220px">
 
 	<p style="color:white; margin-left: 280px">Enjoy and stay happy!!!</p>
-	<br><br><br>
+	<br><br><br> -->
 </div>
