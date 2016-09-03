@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
     	@user = User.find_by({email: params[:email]})
     	@user.try(:authenticate, params[:password])
   	end
-
+ 
   	
 	def self.boozt_email(boozt)
 		@content = Content.find(boozt.content_id)
@@ -26,8 +26,8 @@ class User < ActiveRecord::Base
 		number = @user.phone_number
 		content = @content.url
 
-		account_sid = ENV["twilio_account_sid"]
-		auth_token = ENV["twilio_auth_token"]
+		account_sid = "AC061425bcf72ca98521059df2b7868122"
+		auth_token = "4cbd0c66e0252049ec94d172d5a0a209"
 
 		@client = Twilio::REST::Client.new account_sid, auth_token
 
