@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   patch '/send_text', to: 'texty#send_text'
 
   post '/instant_boozt', to: "users#instant_boozt"
+  post '/add_content_category', to: "contents#add_content_category"
+
   
 end
 

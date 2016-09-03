@@ -31,3 +31,12 @@
 <br>
 
 <%= link_to 'New Content', new_content_path %>
+
+
+<h1>Add categories for content</h1>
+
+<%= form_tag("/add_content_category", method: "post") do %>
+  <%= label_tag(:category, "Category") %>
+  <%= text_field_tag(:category) %>
+  <%= submit_tag("Add category") %>
+<% end %>

@@ -3,15 +3,16 @@ class Content < ActiveRecord::Base
 	has_many :users, through: :boozts
 
 	## giphy
-	def self.get_GIPHY_data
-		response = HTTParty.get('http://api.giphy.com/v1/gifs/search?q=funny+panda&api_key=dc6zaTOxFJmzC&fmt=json')
+	def self.get_GIPHY_data (category)
+		category_data = category.split("+")
+		response = HTTParty.get('http://api.giphy.com/v1/gifs/search?q=' + category + '&api_key=dc6zaTOxFJmzC&fmt=json')
 		response["data"].each do |content|
 			url = content["images"]["fixed_height"]["url"]
 			Content.create({
-				title: "Funny Panda",
+				title: category_data[0] + " " + category_data[1],
 	            url: url,
 	            category: "GIF",
-	            sentiment: "Panda"
+	            sentiment: category_data[0]
 				})
 		end
 	end

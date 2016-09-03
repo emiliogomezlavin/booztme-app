@@ -61,6 +61,12 @@ class ContentsController < ApplicationController
     end
   end
 
+  def add_content_category
+    category = params["category"]
+    Content.get_GIPHY_data (category)
+    redirect_to :back
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_content
