@@ -1,42 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Contents</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Url</th>
-      <th>Category</th>
-      <th>Sentiment</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @contents.each do |content| %>
-      <tr>
-        <td><%= content.title %></td>
-        <td><%= content.url %></td>
-        <td><%= content.category %></td>
-        <td><%= content.sentiment %></td>
-        <td><%= link_to 'Show', content %></td>
-        <td><%= link_to 'Edit', edit_content_path(content) %></td>
-        <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="row">
+  <h5 style="color: white; text-align: center">Add categories for content</h5>
+  <div class="col s6 offset-s3">
+    <%= form_tag("/add_content_category", method: "post") do %>
+      <%= label_tag(:category, "Category") %>
+      <%= text_field_tag(:category) %>
+      <%= submit_tag("Add category") %>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
+
+<br><br><br>
+<div class="row">
+
+  <h1>Listing Contents</h1>
+  <% @contents.each do |content| %>
+    <div class="col s3" style="display: block; text-align: center">
+      <img src="<%= content.url %>" style="width: 100%">
+      <p style="text-align: center"><%= content.id %></p>
+      <%= link_to 'Show', content %>
+      <%= link_to 'Destroy', content, method: :delete %>
+    </div>
+  <% end %>
+
+</div>
 
 <br>
 
 <%= link_to 'New Content', new_content_path %>
 
 
-<h1>Add categories for content</h1>
-
-<%= form_tag("/add_content_category", method: "post") do %>
-  <%= label_tag(:category, "Category") %>
-  <%= text_field_tag(:category) %>
-  <%= submit_tag("Add category") %>
-<% end %>
