@@ -73,7 +73,7 @@ class UsersController < ApplicationController
   end
 
   def instant_boozt
-    @user = User.find(29)
+    @user = User.find(1)
     @user.first_name = params["first_name"] 
     @user.phone_number = User.normalize_phone(params["phone_number"])
     # @user.email = params["email"]

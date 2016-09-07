@@ -102,8 +102,8 @@ class User < ActiveRecord::Base
 	end
 
 	def self.demo
-		user = User.find(29)
-		content = Content.find(13)
+		user = User.find(1)
+		content = Content.find(31)
 		# content = Content.find(13)
 		boozt = Boozt.create({user: user, content: content})
 		if user.phone_number != "" && user.email != ""
