@@ -63,7 +63,6 @@ class UsersController < ApplicationController
 
   def new_text
     @user = current_user
-    binding.pry
     render :new_text
   end
 
@@ -76,7 +75,7 @@ class UsersController < ApplicationController
   def instant_boozt
     @user = User.find(1)
     @user.first_name = params["first_name"] 
-    @user.phone_number = params["phone_number"]
+    @user.phone_number = User.normalize_phone(params["phone_number"])
     @user.email = params["email"]
     if @user.save
       User.demo

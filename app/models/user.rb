@@ -108,8 +108,13 @@ class User < ActiveRecord::Base
 		boozt = Boozt.create({user: user, content: content})
 		if user.phone_number != "" && user.email != ""
 			User.boozt_sms(Boozt.find(boozt.id))
-			User.boozt_email(Boozt.find(boozt.id))
+			# User.boozt_email(Boozt.find(boozt.id))
 		end
+	end
+
+	def self.normalize_phone(number)
+		normalized_number = "1" + number.gsub(/[^0-9A-Za-z]/, '')
+		return normalized_number
 	end
 
 

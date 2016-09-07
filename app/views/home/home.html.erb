@@ -91,10 +91,12 @@
         <%= form_tag("/instant_boozt", method: "post") do %>
           <%= label_tag(:first_name, "First Name") %>
           <%= text_field_tag(:first_name) %>
-          <%= label_tag(:phone_number, "Number") %>
-          <%= text_field_tag(:phone_number) %>
-          <%= label_tag(:email, "Email") %>
-          <%= text_field_tag(:email) %>
+          <!-- <%= label_tag(:phone_number, "Phone Number")%>
+          <%= text_field_tag(:phone_number, options={placeholder: "Enter your phone number with area code (10 digits)"})%> -->
+          <label for="phone_number">Phone Number</label>
+          <input id="phone_number" name="phone_number" placeholder="Enter your phone number including area code (10 digits)" type="text" />
+          <!-- <%= label_tag(:email, "Email") %>
+          <%= text_field_tag(:email) %> -->
           <%= submit_tag("Get my boozt") %>
         <% end %>
         <%= image_tag('iphone-example.png', options={class: "iphone-image center"}) %>
