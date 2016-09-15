@@ -90,11 +90,9 @@
     <div class="modal-content">
       <div class="row">
         <h1 class="center">Get your first Boozt</h1>
-        <p style="padding: 20px">Add you name and phone number to get an example of what it's like to receive your Boozts everyday!</p>
+        <p style="padding-left: 20px; padding-right:20px; padding-bottom: 20px">Add you name and phone number to get an example of what it's like to receive your Boozts everyday!</p>
         <div class="col s6 ">
           <%= form_tag("/instant_boozt", method: "post") do %>
-            <!-- <%= label_tag(:first_name, "First Name", placeholder: "Your name") %>
-            <%= text_field_tag(:first_name) %> -->
             <label for="first_name">First Name</label>
             <input id="first_name" name="first_name" placeholder="Your name" type="text" /> 
             <label for="phone_number">Phone Number</label>
