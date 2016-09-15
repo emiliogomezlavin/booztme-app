@@ -56,12 +56,17 @@ class User < ActiveRecord::Base
 			## sets the random_boozts for each user based on how many boozts need to be set
 			while j < user.boozts_per_frequency do
 				time = Time.new(today[0],today[1],today[2],user.boozt_start,0,0, "-07:00")
+				p time
 				random = Random.new.rand(0.0...1.0)
+				p random
 				dif = ((user.boozt_end - user.boozt_start)*60*60)
+				p dif
 				add_on = (random * dif).to_i
+				p add_on
 				random_boozt_time[j] = time + add_on
 				j += 1
 			end
+
 
 			random_boozt_time.each do |boozt|
 				##  sets a random index for the content array to use on the user
@@ -102,12 +107,13 @@ class User < ActiveRecord::Base
 	end
 
 	def self.demo
-		user = User.find(1)
+		user = User.find(29)
 		content = Content.find(31)
 		# content = Content.find(13)
 		boozt = Boozt.create({user: user, content: content})
 		if user.phone_number != "" && user.email != ""
 			User.boozt_sms(Boozt.find(boozt.id))
+			# success.add("Your instant boozt was sent!")
 			# User.boozt_email(Boozt.find(boozt.id))
 		end
 	end

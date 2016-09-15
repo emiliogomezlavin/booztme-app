@@ -18,6 +18,7 @@
 
   <!--  CDN Animate CSS  -->
   <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+  <link rel="icon" href="http://ontariospca.ca/blog/wp-content/themes/ontarioblog/images/bg-dog-image.png">
 
   <!-- ScrollReveal.js -->
   <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.2.0/scrollreveal.min.js"></script>
@@ -31,18 +32,12 @@
 </head>
 <body>
 
-<%= render 'header' %>
-
+  <%= render 'header' %>
+ 
   <%= yield %>
+  
 
-<%= render 'footer' %>
-
-<!-- Facebook Login OAuth -->
-<!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button> -->
-<!-- <button onclick="login()">Facebook Login</button>
-<div id="status">
-</div> -->
+  <%= render 'footer' %>
 
 
 </body>

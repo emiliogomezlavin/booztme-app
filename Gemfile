@@ -62,5 +62,7 @@ gem "mail", "2.6.4"
 
 gem "figaro"
 
+gem "twitter-bootstrap-rails"
+
 
 

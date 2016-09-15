@@ -54,6 +54,9 @@ li > a {
   margin-right: 20px;
 }
 
+li:hover, {
+  color: #F05D23 !important; 
+}
 .logo-nav-bar {
   height: 55px;
   width: 170px;
@@ -68,8 +71,24 @@ li > a {
   font-weight: bold;
 }
 
+.about-info {
+  font-style: justify; 
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: Lato;
+}
 
-
+.about-titles {
+  color: #F05D23;
+  font-style: bold;
+  font-size: 25px;
+}
+a.nav-bar-title:hover, a.nav-bar-title:active {
+  color: #F05D23 !important;
+  font-style: bold !important;
+  font-size: 23px !important;
+  background-color: transparent !important;
+}
 .button {
   background-color: #F05D23 !important;
   color: white !important;
@@ -95,7 +114,7 @@ li > a {
 }
 
 .iphone-image {
-  height: 500px;
+  height: auto;
 }
 
 .header {
@@ -125,8 +144,12 @@ li > a {
 .why-p-tag {
   font-size: 25px;
   font-family: 'Arvo', sans-serif;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 15px 20px 15px 20px;
+  /*padding-right: 15px;*/
+}
+
+.modal {
+  width: 70% !important;
 }
 
 h1 {

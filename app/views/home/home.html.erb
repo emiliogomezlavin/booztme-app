@@ -7,17 +7,15 @@
           <h5 class="header adv-copy">Brighten up the world one boozt at a time</h5>
           <%= link_to "Join Us", new_user_path, method: :get, class: "waves-effect waves-light btn-large button" %>
         </div>
-
-
       </div>
     </div>
-    <div class="parallax"><%= image_tag('background.png') %></div>
+    <div class="parallax home-main-container"><%= image_tag('background.png') %></div>
   </div>
 
 
-  <div class="stripe" >
-      <!--   Icon Section   -->
-      <div class="row center"><h1 class="home-title">HOW IT WORKS</h1></div>
+  <div class="stripe first-stripe">
+    <!--   Icon Section   -->
+    <div class="row center"><h1 class="home-title">HOW IT WORKS</h1></div>
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
@@ -45,6 +43,10 @@
             <p class="light how-p-tag">Receive boozts randomly during the day to lift your spirit when you least expect it!</p>
           </div>
         </div>
+      </div>
+      <div class="row center" style="padding-top: 20px">
+        <a class="modal-trigger waves-effect waves-light btn-large button" href="#modal-instant">Get an Instant Boozt</a>
+      </div>
     </div>
   </div>
 
@@ -61,24 +63,24 @@
   </div>
 
   <div class="stripe">
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h1 class="home-title" style="color: #F05D23">WHY BOOZT?</h1></br>
-          <div class="row">
-            <div class="col s6 center">
-              <p class="left-align light why-p-tag"><i class="material-icons icons">flash_on</i>&nbsp&nbsp&nbsp&nbsp&nbsp Instant mood boozters!!!</p>
-              <p class="left-align light why-p-tag"><i class="material-icons icons">local_activity</i>&nbsp&nbsp&nbsp&nbsp&nbsp The best gift comes when you least expect it</p>
-            </div>
-            <div class="col s6 center">
-              <p class="left-align light why-p-tag"><i class="material-icons icons">terrain</i>&nbsp&nbsp&nbsp&nbsp&nbsp Take a break, relax and enjoy life</p>
-              <p class="left-align light why-p-tag"><i class="material-icons icons">people</i>&nbsp&nbsp&nbsp&nbsp&nbsp Join a community of boozted people that want a happier world</p>
-            </div>
+    <div class="row" style="padding-top: 20px; padding-bottom: 20px">
+      <div class="col s12 center">
+        <h3><i class="mdi-content-send brown-text"></i></h3>
+        <h1 class="home-title" style="color: #F05D23">WHY BOOZT?</h1></br>
+        <div class="row">
+          <div class="col s6 center">
+            <p class="left-align light why-p-tag"><i class="material-icons icons">flash_on</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Instant mood boozters!!!</p>
+            <p class="left-align light why-p-tag"><i class="material-icons icons">local_activity</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The best gift comes when you least expect it</p>
+          </div>
+          <div class="col s6 center">
+            <p class="left-align light why-p-tag"><i class="material-icons icons">terrain</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Take a break, relax and enjoy life</p>
+            <p class="left-align light why-p-tag"><i class="material-icons icons">people</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Join a community of boozted people that want a happier world</p>
           </div>
         </div>
+        <div class="row center" style="padding-top: 20px">
+          <a class="modal-trigger waves-effect waves-light btn-large button" href="/about">Learn more about Boozt</a>
+        </div>
       </div>
-      <div class="row center">
-      <a class="modal-trigger waves-effect waves-light btn-large button" href="#modal-instant">Get an Instant Boozt</a>
     </div>
   </div>
 
@@ -86,20 +88,28 @@
  <!-- Modal Structure -->
   <div id="modal-instant" class="modal modal-fixed-footer">
     <div class="modal-content">
-      <div class="container">
-        <h1 class="center">What does my Boozt look like?</h1>
-        <%= form_tag("/instant_boozt", method: "post") do %>
-          <%= label_tag(:first_name, "First Name") %>
-          <%= text_field_tag(:first_name) %>
-          <!-- <%= label_tag(:phone_number, "Phone Number")%>
-          <%= text_field_tag(:phone_number, options={placeholder: "Enter your phone number with area code (10 digits)"})%> -->
-          <label for="phone_number">Phone Number</label>
-          <input id="phone_number" name="phone_number" placeholder="Enter your phone number including area code (10 digits)" type="text" />
-          <!-- <%= label_tag(:email, "Email") %>
-          <%= text_field_tag(:email) %> -->
-          <%= submit_tag("Get my boozt") %>
-        <% end %>
-        <%= image_tag('iphone-example.png', options={class: "iphone-image center"}) %>
+      <div class="row">
+        <h1 class="center">Get your first Boozt</h1>
+        <p style="padding: 20px">Add you name and phone number to get an example of what it's like to receive your Boozts everyday!</p>
+        <div class="col s6 ">
+          <%= form_tag("/instant_boozt", method: "post") do %>
+            <!-- <%= label_tag(:first_name, "First Name", placeholder: "Your name") %>
+            <%= text_field_tag(:first_name) %> -->
+            <label for="first_name">First Name</label>
+            <input id="first_name" name="first_name" placeholder="Your name" type="text" /> 
+            <label for="phone_number">Phone Number</label>
+            <input id="phone_number" name="phone_number" placeholder="Enter your phone number including area code (10 digits)" type="text" /> <br><br>
+            <!-- <%= label_tag(:email, "Email") %>
+            <%= text_field_tag(:email) %> -->
+            <div class="center">
+              <!-- <%= submit_tag "Get my boozt", class: "btn-large button"%> -->
+              <input type="submit" name="commit" value="Get my boozt" class="btn-large button" onclick="Materialize.toast('Your boozt is on its way!', 6000,'',function(){alert('Your toast was dismissed')})">
+            </div>
+          <% end %>
+        </div>
+        <div class="col s6">
+          <%= image_tag('iphone-example.png', options={class: "iphone-image center", style: "width: 100%; heigth: auto; margin-top: -40px"}) %>
+        </div>
       </div>
     </div>
   </div>
